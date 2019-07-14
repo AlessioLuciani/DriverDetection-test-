@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CA171FEA22CBA4A4003E8E6E /* MotionDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA171FE922CBA4A4003E8E6E /* MotionDataViewController.swift */; };
+		CA2361FA22CFFF940023E40C /* MagDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2361F922CFFF940023E40C /* MagDataViewController.swift */; };
+		CAD94D0F22C6513E00D1BCD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD94D0E22C6513E00D1BCD3 /* AppDelegate.swift */; };
+		CAD94D1422C6513E00D1BCD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAD94D1222C6513E00D1BCD3 /* Main.storyboard */; };
+		CAD94D1622C6513E00D1BCD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD94D1522C6513E00D1BCD3 /* Assets.xcassets */; };
+		CAD94D1922C6513E00D1BCD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAD94D1722C6513E00D1BCD3 /* LaunchScreen.storyboard */; };
+		CADE2B1B22CA7DAF00E4E943 /* GyroDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADE2B1A22CA7DAF00E4E943 /* GyroDataViewController.swift */; };
+		CAEA122722C7AA950066D5D0 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEA122622C7AA950066D5D0 /* RootViewController.swift */; };
+		CAEA122922C7AF480066D5D0 /* AccDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEA122822C7AF480066D5D0 /* AccDataViewController.swift */; };
+		F8297C0491E3C1A09F155BD7 /* Pods_Driver_Detection__test_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A723835A1181FDE0576ECC2D /* Pods_Driver_Detection__test_.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		345E4AF74776B2F5322A4241 /* Pods-Driver Detection (test).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Driver Detection (test).release.xcconfig"; path = "Target Support Files/Pods-Driver Detection (test)/Pods-Driver Detection (test).release.xcconfig"; sourceTree = "<group>"; };
+		54711B6E99237E7AD91B00C9 /* Pods-Driver Detection (test).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Driver Detection (test).debug.xcconfig"; path = "Target Support Files/Pods-Driver Detection (test)/Pods-Driver Detection (test).debug.xcconfig"; sourceTree = "<group>"; };
+		A723835A1181FDE0576ECC2D /* Pods_Driver_Detection__test_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Driver_Detection__test_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA171FE922CBA4A4003E8E6E /* MotionDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDataViewController.swift; sourceTree = "<group>"; };
+		CA2361F922CFFF940023E40C /* MagDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagDataViewController.swift; sourceTree = "<group>"; };
+		CAD94D0B22C6513E00D1BCD3 /* Driver Detection (test).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Driver Detection (test).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CAD94D0E22C6513E00D1BCD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CAD94D1322C6513E00D1BCD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CAD94D1522C6513E00D1BCD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CAD94D1822C6513E00D1BCD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CAD94D1A22C6513E00D1BCD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CADE2B1A22CA7DAF00E4E943 /* GyroDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroDataViewController.swift; sourceTree = "<group>"; };
+		CAEA122622C7AA950066D5D0 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		CAEA122822C7AF480066D5D0 /* AccDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccDataViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CAD94D0822C6513E00D1BCD3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8297C0491E3C1A09F155BD7 /* Pods_Driver_Detection__test_.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C4706607F12E099167270EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A723835A1181FDE0576ECC2D /* Pods_Driver_Detection__test_.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		527B5938A4CDA1EC8D18301C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				54711B6E99237E7AD91B00C9 /* Pods-Driver Detection (test).debug.xcconfig */,
+				345E4AF74776B2F5322A4241 /* Pods-Driver Detection (test).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA78FBA022C746DD00EE132E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CAEA122622C7AA950066D5D0 /* RootViewController.swift */,
+				CAEA122822C7AF480066D5D0 /* AccDataViewController.swift */,
+				CADE2B1A22CA7DAF00E4E943 /* GyroDataViewController.swift */,
+				CA171FE922CBA4A4003E8E6E /* MotionDataViewController.swift */,
+				CA2361F922CFFF940023E40C /* MagDataViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CAD94D0222C6513E00D1BCD3 = {
+			isa = PBXGroup;
+			children = (
+				CAD94D0D22C6513E00D1BCD3 /* Driver Detection (test) */,
+				CAD94D0C22C6513E00D1BCD3 /* Products */,
+				527B5938A4CDA1EC8D18301C /* Pods */,
+				1C4706607F12E099167270EE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CAD94D0C22C6513E00D1BCD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CAD94D0B22C6513E00D1BCD3 /* Driver Detection (test).app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CAD94D0D22C6513E00D1BCD3 /* Driver Detection (test) */ = {
+			isa = PBXGroup;
+			children = (
+				CAEA122A22C7B52F0066D5D0 /* Utils */,
+				CA78FBA022C746DD00EE132E /* View Controllers */,
+				CAD94D0E22C6513E00D1BCD3 /* AppDelegate.swift */,
+				CAD94D1522C6513E00D1BCD3 /* Assets.xcassets */,
+				CAD94D1222C6513E00D1BCD3 /* Main.storyboard */,
+				CAD94D1722C6513E00D1BCD3 /* LaunchScreen.storyboard */,
+				CAD94D1A22C6513E00D1BCD3 /* Info.plist */,
+			);
+			path = "Driver Detection (test)";
+			sourceTree = "<group>";
+		};
+		CAEA122A22C7B52F0066D5D0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CAD94D0A22C6513E00D1BCD3 /* Driver Detection (test) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAD94D1D22C6513E00D1BCD3 /* Build configuration list for PBXNativeTarget "Driver Detection (test)" */;
+			buildPhases = (
+				846983718CB3E17FAB76848E /* [CP] Check Pods Manifest.lock */,
+				CAD94D0722C6513E00D1BCD3 /* Sources */,
+				CAD94D0822C6513E00D1BCD3 /* Frameworks */,
+				CAD94D0922C6513E00D1BCD3 /* Resources */,
+				67EDDDDFADE0D5E15F57DC0B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Driver Detection (test)";
+			productName = "Driver Detection (test)";
+			productReference = CAD94D0B22C6513E00D1BCD3 /* Driver Detection (test).app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CAD94D0322C6513E00D1BCD3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Alessio Luciani";
+				TargetAttributes = {
+					CAD94D0A22C6513E00D1BCD3 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = CAD94D0622C6513E00D1BCD3 /* Build configuration list for PBXProject "Driver Detection (test)" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CAD94D0222C6513E00D1BCD3;
+			productRefGroup = CAD94D0C22C6513E00D1BCD3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CAD94D0A22C6513E00D1BCD3 /* Driver Detection (test) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CAD94D0922C6513E00D1BCD3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAD94D1922C6513E00D1BCD3 /* LaunchScreen.storyboard in Resources */,
+				CAD94D1622C6513E00D1BCD3 /* Assets.xcassets in Resources */,
+				CAD94D1422C6513E00D1BCD3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		67EDDDDFADE0D5E15F57DC0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Driver Detection (test)/Pods-Driver Detection (test)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Driver Detection (test)/Pods-Driver Detection (test)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Driver Detection (test)/Pods-Driver Detection (test)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		846983718CB3E17FAB76848E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Driver Detection (test)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CAD94D0722C6513E00D1BCD3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA2361FA22CFFF940023E40C /* MagDataViewController.swift in Sources */,
+				CAEA122722C7AA950066D5D0 /* RootViewController.swift in Sources */,
+				CADE2B1B22CA7DAF00E4E943 /* GyroDataViewController.swift in Sources */,
+				CAEA122922C7AF480066D5D0 /* AccDataViewController.swift in Sources */,
+				CAD94D0F22C6513E00D1BCD3 /* AppDelegate.swift in Sources */,
+				CA171FEA22CBA4A4003E8E6E /* MotionDataViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CAD94D1222C6513E00D1BCD3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAD94D1322C6513E00D1BCD3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CAD94D1722C6513E00D1BCD3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CAD94D1822C6513E00D1BCD3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CAD94D1B22C6513E00D1BCD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CAD94D1C22C6513E00D1BCD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CAD94D1E22C6513E00D1BCD3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54711B6E99237E7AD91B00C9 /* Pods-Driver Detection (test).debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4N2FK7Y76;
+				INFOPLIST_FILE = "Driver Detection (test)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tk.alessio.Driver-Detection--test-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CAD94D1F22C6513E00D1BCD3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 345E4AF74776B2F5322A4241 /* Pods-Driver Detection (test).release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G4N2FK7Y76;
+				INFOPLIST_FILE = "Driver Detection (test)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "tk.alessio.Driver-Detection--test-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CAD94D0622C6513E00D1BCD3 /* Build configuration list for PBXProject "Driver Detection (test)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAD94D1B22C6513E00D1BCD3 /* Debug */,
+				CAD94D1C22C6513E00D1BCD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAD94D1D22C6513E00D1BCD3 /* Build configuration list for PBXNativeTarget "Driver Detection (test)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CAD94D1E22C6513E00D1BCD3 /* Debug */,
+				CAD94D1F22C6513E00D1BCD3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CAD94D0322C6513E00D1BCD3 /* Project object */;
+}
