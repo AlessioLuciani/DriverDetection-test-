@@ -12,11 +12,12 @@ import Charts
 
 class AccDataViewController: MotionDataViewController {
     
+    
     @IBOutlet weak var labelX: UILabel!
     @IBOutlet weak var labelY: UILabel!
     @IBOutlet weak var labelZ: UILabel!
     @IBOutlet weak var lineChartView: LineChartView!
-
+    
 
     
     override func viewDidLoad() {

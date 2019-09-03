@@ -46,7 +46,7 @@ class MagDataViewController: MotionDataViewController {
         labelX.isUserInteractionEnabled = true
         labelY.isUserInteractionEnabled = true
         labelZ.isUserInteractionEnabled = true
-      //  labelX.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleX(sender:))))
+        labelX.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleX(sender:))))
         labelY.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleY(sender:))))
         labelZ.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(toggleZ(sender:))))
 
@@ -87,6 +87,7 @@ class MagDataViewController: MotionDataViewController {
                     
                 }
             }
+            
         }
     }
     

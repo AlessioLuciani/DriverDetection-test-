@@ -35,27 +35,34 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vKi-zL-2Bk">
-                                <rect key="frame" x="120" y="273.5" width="135" height="120"/>
+                                <rect key="frame" x="108.5" y="251" width="158" height="165"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDt-X2-CpD">
-                                        <rect key="frame" x="0.0" y="0.0" width="135" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="158" height="30"/>
                                         <state key="normal" title="Acceletometer data"/>
                                         <connections>
                                             <segue destination="nn2-26-0mx" kind="show" identifier="homeToAccData" id="pSe-rW-2Ph"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aO6-GZ-wtx">
-                                        <rect key="frame" x="0.0" y="45" width="135" height="30"/>
+                                        <rect key="frame" x="0.0" y="45" width="158" height="30"/>
                                         <state key="normal" title="Gyroscope data"/>
                                         <connections>
                                             <segue destination="Uyw-gb-0VT" kind="show" identifier="homeToGyroData" id="l98-CI-6bJ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="No4-V8-g2E">
-                                        <rect key="frame" x="0.0" y="90" width="135" height="30"/>
+                                        <rect key="frame" x="0.0" y="90" width="158" height="30"/>
                                         <state key="normal" title="Magnetometer data"/>
                                         <connections>
                                             <segue destination="6ru-lq-nWl" kind="show" identifier="homeToMagData" id="ABy-bQ-s6D"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="waR-ML-NWD">
+                                        <rect key="frame" x="0.0" y="135" width="158" height="30"/>
+                                        <state key="normal" title="Processed motion data"/>
+                                        <connections>
+                                            <segue destination="7Wy-eM-cRF" kind="show" identifier="homeToProcMot" id="MQx-2X-r27"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -73,13 +80,14 @@
                         <segue destination="nn2-26-0mx" kind="show" identifier="homeToAccData" id="B7R-iw-D4r"/>
                         <segue destination="Uyw-gb-0VT" kind="show" identifier="homeToGyroData" id="jfa-Dh-gOm"/>
                         <segue destination="6ru-lq-nWl" kind="show" identifier="homeToMagData" id="29E-dh-1wJ"/>
+                        <segue destination="7Wy-eM-cRF" kind="show" identifier="hometToProcMot" id="dl4-eI-wE3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbL-z1-X6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-308" y="-166"/>
         </scene>
-        <!--Mag Data View Controller-->
+        <!--Magnetometer data-->
         <scene sceneID="GVJ-dz-uJy">
             <objects>
                 <viewController id="6ru-lq-nWl" customClass="MagDataViewController" customModule="Driver_Detection__test_" customModuleProvider="target" sceneMemberID="viewController">
@@ -128,6 +136,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zpz-oO-ubq"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Magnetometer data" id="qr9-x7-gIK"/>
                     <connections>
                         <outlet property="labelX" destination="MFS-Fm-ZJq" id="QHq-Ap-1ia"/>
                         <outlet property="labelY" destination="Dhh-xg-LOo" id="WXy-WC-aHj"/>
@@ -227,7 +236,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Z" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLB-ZN-8pM" userLabel="LabelZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Z" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5F-cd-ByJ" userLabel="LabelZ">
                                 <rect key="frame" x="282" y="374" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -236,11 +245,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="A5F-cd-ByJ" firstAttribute="centerX" secondItem="hFF-Sd-lds" secondAttribute="centerX" constant="100" id="7jt-au-Upo"/>
+                            <constraint firstItem="A5F-cd-ByJ" firstAttribute="top" secondItem="Z3W-0I-zE1" secondAttribute="bottom" constant="10" id="A5S-2A-lDd"/>
                             <constraint firstItem="Z3W-0I-zE1" firstAttribute="leading" secondItem="JCn-t5-xl2" secondAttribute="leading" constant="16" id="B8O-hS-to6"/>
                             <constraint firstItem="JCn-t5-xl2" firstAttribute="trailing" secondItem="Z3W-0I-zE1" secondAttribute="trailing" constant="16" id="DcF-Kx-XGB"/>
                             <constraint firstItem="vQf-VM-9S8" firstAttribute="centerX" secondItem="hFF-Sd-lds" secondAttribute="centerX" id="Kgd-nM-iZd"/>
-                            <constraint firstItem="XLB-ZN-8pM" firstAttribute="top" secondItem="Z3W-0I-zE1" secondAttribute="bottom" constant="10" id="Vb5-up-1Kl"/>
-                            <constraint firstItem="XLB-ZN-8pM" firstAttribute="centerX" secondItem="hFF-Sd-lds" secondAttribute="centerX" constant="100" id="d8T-xl-HWg"/>
                             <constraint firstItem="GWc-KC-v1x" firstAttribute="top" secondItem="Z3W-0I-zE1" secondAttribute="bottom" constant="10" id="ej0-hn-c3F"/>
                             <constraint firstItem="Z3W-0I-zE1" firstAttribute="top" secondItem="JCn-t5-xl2" secondAttribute="top" constant="20" id="k7l-pm-wmA"/>
                             <constraint firstItem="GWc-KC-v1x" firstAttribute="centerX" secondItem="hFF-Sd-lds" secondAttribute="centerX" constant="-100" id="qpe-MH-QED"/>
@@ -250,18 +259,54 @@
                     </view>
                     <navigationItem key="navigationItem" title="Accelerometer data" id="2Rn-0a-CoY"/>
                     <connections>
-                        <outlet property="labelX" destination="GWc-KC-v1x" id="eZw-Yd-C7z"/>
-                        <outlet property="labelY" destination="vQf-VM-9S8" id="7Dh-e1-y9y"/>
-                        <outlet property="labelZ" destination="XLB-ZN-8pM" id="bQE-Nj-IOz"/>
-                        <outlet property="lineChartView" destination="Z3W-0I-zE1" id="jbc-nP-Z6g"/>
+                        <outlet property="labelX" destination="GWc-KC-v1x" id="jLP-4Y-gwb"/>
+                        <outlet property="labelY" destination="vQf-VM-9S8" id="8nB-qy-WRe"/>
+                        <outlet property="labelZ" destination="A5F-cd-ByJ" id="j4v-en-HAZ"/>
+                        <outlet property="lineChartView" destination="Z3W-0I-zE1" id="YD5-Sf-f7K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CK9-9h-gB5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="397.60000000000002" y="-1471.2143928035982"/>
         </scene>
+        <!--Processed motion data-->
+        <scene sceneID="dQT-It-EkV">
+            <objects>
+                <viewController id="7Wy-eM-cRF" customClass="ProcMotDataViewController" customModule="Driver_Detection__test_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OAD-kn-9Hl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2A-SP-nMi" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="64" width="375" height="280"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="drp-0H-jLh"/>
+                                </constraints>
+                                <viewLayoutGuide key="safeArea" id="pDr-kj-sR8"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="M2A-SP-nMi" firstAttribute="leading" secondItem="yj1-a9-urw" secondAttribute="leading" id="16g-bt-mhJ"/>
+                            <constraint firstItem="M2A-SP-nMi" firstAttribute="centerX" secondItem="OAD-kn-9Hl" secondAttribute="centerX" id="Nth-kl-lIp"/>
+                            <constraint firstItem="M2A-SP-nMi" firstAttribute="trailing" secondItem="yj1-a9-urw" secondAttribute="trailing" id="T4d-HV-dsi"/>
+                            <constraint firstItem="M2A-SP-nMi" firstAttribute="top" secondItem="yj1-a9-urw" secondAttribute="top" id="hLX-T4-OPV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yj1-a9-urw"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Processed motion data" id="NXH-6g-nGv"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="M2A-SP-nMi" id="Ish-5L-ekj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Zu-38-zS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="545"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="MQx-2X-r27"/>
         <segue reference="B7R-iw-D4r"/>
         <segue reference="l98-CI-6bJ"/>
         <segue reference="ABy-bQ-s6D"/>

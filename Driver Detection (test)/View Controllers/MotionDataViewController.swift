@@ -66,6 +66,15 @@ class MotionDataViewController: UIViewController {
         }
     }
     
+    // Starts the processed motion data retriever
+    func startProcMotion() {
+        if motion.isDeviceMotionAvailable {
+            self.motion.deviceMotionUpdateInterval = 1.0 / 60.0
+            self.motion.showsDeviceMovementDisplay = true
+            self.motion.startDeviceMotionUpdates(using: .xMagneticNorthZVertical)
+        }
+    }
+    
     // To override
     func createWork() -> DispatchWorkItem {
         return DispatchWorkItem {}
