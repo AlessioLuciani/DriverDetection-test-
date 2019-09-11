@@ -12,8 +12,24 @@ import Charts
 
 class ProcMotDataViewController: MotionDataViewController {
     
+    var motionData: [Int] = []
+    
     @IBOutlet weak var lineChartView: LineChartView!
     
+
+    @IBAction func saveToFile(_ sender: UIButton) {
+        var text = "{\n"
+        for i in 0 ..< motionData.count {
+            text += "\"" + String(i) + "\":\"" + String(motionData[i]) + "\",\n"
+        }
+     
+        text += "}\n"
+        appendToFile(text)
+    }
+    
+    @IBAction func resetFile(_ sender: UIButton) {
+        writeToFile("")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +55,7 @@ class ProcMotDataViewController: MotionDataViewController {
         lineChartView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(pauseResumeRefresh(sender:))))
         
         
+        
     }
     
     // Refreshes the labels with current accelerometer data
@@ -58,9 +75,8 @@ class ProcMotDataViewController: MotionDataViewController {
                         floor(deltaTime) > floor(self.valuesX[self.valuesX.count-1].x) ||
                         deltaTime > self.valuesX[self.valuesX.count-1].x + 0.5 {
                         self.valuesX.append(ChartDataEntry(x: Double(deltaTime), y: x))
-                       // self.valuesY.append(ChartDataEntry(x: Double(deltaTime), y: y))
-                       // self.valuesZ.append(ChartDataEntry(x: Double(deltaTime), y: z))
-                        
+                        self.motionData.append(Int(x))
+               
                         self.setChartValues(refreshUI: self.refreshChart)
                     }
                 }
@@ -71,12 +87,84 @@ class ProcMotDataViewController: MotionDataViewController {
     // Refreshes the UI of the chart
     func refreshChart(data: LineChartData) {
         self.lineChartView.data = data
-        let val: Double = 2
-        self.lineChartView.leftAxis.axisMinimum = -val
+        let val: Double = 360
+        self.lineChartView.leftAxis.axisMinimum = -0
         self.lineChartView.leftAxis.axisMaximum = val
-        self.lineChartView.rightAxis.axisMinimum = -val
+        self.lineChartView.rightAxis.axisMinimum = -0
         self.lineChartView.rightAxis.axisMaximum = val
     }
 
     
 }
+
+
+//////////// Save to file
+
+func writeToFile(_ writeString: String) {
+
+    // Save data to file
+    let fileName = "motion_data"
+    let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+    
+    let fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
+    print("FilePath: \(fileURL.path)")
+    
+    
+    do {
+        // Write to the file
+        try writeString.write(to: fileURL, atomically: true, encoding: String.Encoding.utf8)
+    } catch let error as NSError {
+        print("Failed writing to URL: \(fileURL), Error: " + error.localizedDescription)
+    }
+    
+    var readString = "" // Used to store the file contents
+    do {
+        // Read the file contents
+        readString = try String(contentsOf: fileURL)
+    } catch let error as NSError {
+        print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
+    }
+    print("File Text: \(readString)")
+    
+}
+
+func appendToFile(_ writeString: String) {
+    
+    // Save data to file
+    let fileName = "motion_data"
+    let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+    
+    let fileURL = DocumentDirURL.appendingPathComponent(fileName).appendingPathExtension("txt")
+    
+    var readString = "" // Used to store the file contents
+    do {
+        // Read the file contents
+        readString += try String(contentsOf: fileURL)
+    } catch let error as NSError {
+        print("Failed reading from URL: \(fileURL), Error: " + error.localizedDescription)
+    }
+    
+    readString += writeString + ",\n"
+    
+    writeToFile(readString)
+    
+}
+
+
+/*
+//////////// HTTP request
+
+func performRequest(data: String) {
+    
+    let url = URL(string: "http://www.stackoverflow.com")!
+    
+    let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+        guard let data = data else { return }
+        print(String(data: data, encoding: .utf8)!)
+    }
+    
+    task.resume()
+    
+}
+
+*/

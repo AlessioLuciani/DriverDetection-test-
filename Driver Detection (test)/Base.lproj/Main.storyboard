@@ -285,12 +285,30 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="pDr-kj-sR8"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQv-XT-w5v">
+                                <rect key="frame" x="60" y="372" width="76" height="30"/>
+                                <state key="normal" title="Save to file"/>
+                                <connections>
+                                    <action selector="saveToFile:" destination="7Wy-eM-cRF" eventType="touchUpInside" id="qU9-t2-JwI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhw-W8-PlB">
+                                <rect key="frame" x="244" y="372" width="64" height="30"/>
+                                <state key="normal" title="Reset file"/>
+                                <connections>
+                                    <action selector="resetFile:" destination="7Wy-eM-cRF" eventType="touchUpInside" id="n2P-tb-ui4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="M2A-SP-nMi" firstAttribute="leading" secondItem="yj1-a9-urw" secondAttribute="leading" id="16g-bt-mhJ"/>
+                            <constraint firstItem="yj1-a9-urw" firstAttribute="trailing" secondItem="jhw-W8-PlB" secondAttribute="trailing" constant="67" id="3ge-KD-PAz"/>
+                            <constraint firstItem="WQv-XT-w5v" firstAttribute="leading" secondItem="yj1-a9-urw" secondAttribute="leading" constant="60" id="FnU-Wh-oas"/>
                             <constraint firstItem="M2A-SP-nMi" firstAttribute="centerX" secondItem="OAD-kn-9Hl" secondAttribute="centerX" id="Nth-kl-lIp"/>
+                            <constraint firstItem="WQv-XT-w5v" firstAttribute="top" secondItem="M2A-SP-nMi" secondAttribute="bottom" constant="28" id="PJg-bb-79a"/>
                             <constraint firstItem="M2A-SP-nMi" firstAttribute="trailing" secondItem="yj1-a9-urw" secondAttribute="trailing" id="T4d-HV-dsi"/>
+                            <constraint firstItem="jhw-W8-PlB" firstAttribute="top" secondItem="M2A-SP-nMi" secondAttribute="bottom" constant="28" id="gI8-ta-7Ux"/>
                             <constraint firstItem="M2A-SP-nMi" firstAttribute="top" secondItem="yj1-a9-urw" secondAttribute="top" id="hLX-T4-OPV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yj1-a9-urw"/>
