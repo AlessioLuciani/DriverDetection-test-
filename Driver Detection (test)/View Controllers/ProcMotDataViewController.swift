@@ -14,6 +14,8 @@ class ProcMotDataViewController: MotionDataViewController {
     
     var motionData: [Int] = []
     
+    var startingHeading: Int = -1;
+    
     @IBOutlet weak var lineChartView: LineChartView!
     
 
@@ -62,9 +64,13 @@ class ProcMotDataViewController: MotionDataViewController {
     override func createWork() -> DispatchWorkItem {
         return DispatchWorkItem {
             if let data = self.motion.deviceMotion {
-                let x = data.heading
-                //let y = data.acceleration.y
-                //let z = data.acceleration.z
+                if (self.startingHeading == -1) {
+                    self.startingHeading = Int(data.heading)
+                }
+                let curHeading = Int(data.heading)
+                let x = self.startingHeading <= 180
+                    ? (curHeading + (180 - self.startingHeading)) % 360
+                    : (curHeading - (self.startingHeading - 180) + 360) % 360
                 DispatchQueue.main.async { // Executing on UI Thread
                     
                     // Difference of time (now - view opened)
@@ -74,8 +80,8 @@ class ProcMotDataViewController: MotionDataViewController {
                     if self.valuesX.count == 0 ||
                         floor(deltaTime) > floor(self.valuesX[self.valuesX.count-1].x) ||
                         deltaTime > self.valuesX[self.valuesX.count-1].x + 0.5 {
-                        self.valuesX.append(ChartDataEntry(x: Double(deltaTime), y: x))
-                        self.motionData.append(Int(x))
+                        self.valuesX.append(ChartDataEntry(x: Double(deltaTime), y: Double(x)))
+                        self.motionData.append(x)
                
                         self.setChartValues(refreshUI: self.refreshChart)
                     }
@@ -151,20 +157,3 @@ func appendToFile(_ writeString: String) {
 }
 
 
-/*
-//////////// HTTP request
-
-func performRequest(data: String) {
-    
-    let url = URL(string: "http://www.stackoverflow.com")!
-    
-    let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-        guard let data = data else { return }
-        print(String(data: data, encoding: .utf8)!)
-    }
-    
-    task.resume()
-    
-}
-
-*/
