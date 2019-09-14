@@ -69,7 +69,7 @@ class ProcMotDataViewController: MotionDataViewController {
                 }
                 let curHeading = Int(data.heading)
                 let x = self.startingHeading <= 180
-                    ? (curHeading + (180 - self.startingHeading)) % 360
+                    ? (curHeading + (180 - self.startingHeading) + 360) % 360
                     : (curHeading - (self.startingHeading - 180) + 360) % 360
                 DispatchQueue.main.async { // Executing on UI Thread
                     
