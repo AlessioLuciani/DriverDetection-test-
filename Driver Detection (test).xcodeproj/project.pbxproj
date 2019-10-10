@@ -10,6 +10,9 @@
 		CA171FEA22CBA4A4003E8E6E /* MotionDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA171FE922CBA4A4003E8E6E /* MotionDataViewController.swift */; };
 		CA2361FA22CFFF940023E40C /* MagDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2361F922CFFF940023E40C /* MagDataViewController.swift */; };
 		CA3EF46022E1CB6800188F48 /* ProcMotDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3EF45F22E1CB6800188F48 /* ProcMotDataViewController.swift */; };
+		CA8697F3234FABB700DCC19C /* ParkSample.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8697F2234FABB700DCC19C /* ParkSample.swift */; };
+		CA8697F5234FBE3000DCC19C /* ParkingDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8697F4234FBE3000DCC19C /* ParkingDataViewController.swift */; };
+		CA8697F7234FC48500DCC19C /* ParkDataCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8697F6234FC48400DCC19C /* ParkDataCollector.swift */; };
 		CAD94D0F22C6513E00D1BCD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAD94D0E22C6513E00D1BCD3 /* AppDelegate.swift */; };
 		CAD94D1422C6513E00D1BCD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CAD94D1222C6513E00D1BCD3 /* Main.storyboard */; };
 		CAD94D1622C6513E00D1BCD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAD94D1522C6513E00D1BCD3 /* Assets.xcassets */; };
@@ -27,6 +30,9 @@
 		CA171FE922CBA4A4003E8E6E /* MotionDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotionDataViewController.swift; sourceTree = "<group>"; };
 		CA2361F922CFFF940023E40C /* MagDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagDataViewController.swift; sourceTree = "<group>"; };
 		CA3EF45F22E1CB6800188F48 /* ProcMotDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcMotDataViewController.swift; sourceTree = "<group>"; };
+		CA8697F2234FABB700DCC19C /* ParkSample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkSample.swift; sourceTree = "<group>"; };
+		CA8697F4234FBE3000DCC19C /* ParkingDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingDataViewController.swift; sourceTree = "<group>"; };
+		CA8697F6234FC48400DCC19C /* ParkDataCollector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkDataCollector.swift; sourceTree = "<group>"; };
 		CAD94D0B22C6513E00D1BCD3 /* Driver Detection (test).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Driver Detection (test).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAD94D0E22C6513E00D1BCD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAD94D1322C6513E00D1BCD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -76,6 +82,7 @@
 				CA171FE922CBA4A4003E8E6E /* MotionDataViewController.swift */,
 				CA2361F922CFFF940023E40C /* MagDataViewController.swift */,
 				CA3EF45F22E1CB6800188F48 /* ProcMotDataViewController.swift */,
+				CA8697F4234FBE3000DCC19C /* ParkingDataViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -115,6 +122,8 @@
 		CAEA122A22C7B52F0066D5D0 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CA8697F2234FABB700DCC19C /* ParkSample.swift */,
+				CA8697F6234FC48400DCC19C /* ParkDataCollector.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -236,11 +245,14 @@
 			files = (
 				CA2361FA22CFFF940023E40C /* MagDataViewController.swift in Sources */,
 				CAEA122722C7AA950066D5D0 /* RootViewController.swift in Sources */,
+				CA8697F5234FBE3000DCC19C /* ParkingDataViewController.swift in Sources */,
 				CADE2B1B22CA7DAF00E4E943 /* GyroDataViewController.swift in Sources */,
+				CA8697F3234FABB700DCC19C /* ParkSample.swift in Sources */,
 				CAEA122922C7AF480066D5D0 /* AccDataViewController.swift in Sources */,
 				CAD94D0F22C6513E00D1BCD3 /* AppDelegate.swift in Sources */,
 				CA3EF46022E1CB6800188F48 /* ProcMotDataViewController.swift in Sources */,
 				CA171FEA22CBA4A4003E8E6E /* MotionDataViewController.swift in Sources */,
+				CA8697F7234FC48500DCC19C /* ParkDataCollector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

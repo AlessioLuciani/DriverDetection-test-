@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5iP-fN-48B">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5iP-fN-48B">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15508"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +13,7 @@
             <objects>
                 <navigationController id="5iP-fN-48B" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HxT-Jo-NW2">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -35,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vKi-zL-2Bk">
-                                <rect key="frame" x="108.5" y="251" width="158" height="165"/>
+                                <rect key="frame" x="108.5" y="228.5" width="158" height="210"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZDt-X2-CpD">
                                         <rect key="frame" x="0.0" y="0.0" width="158" height="30"/>
@@ -65,6 +63,13 @@
                                             <segue destination="7Wy-eM-cRF" kind="show" identifier="homeToProcMot" id="MQx-2X-r27"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tP-qv-kuM">
+                                        <rect key="frame" x="0.0" y="180" width="158" height="30"/>
+                                        <state key="normal" title="Parking data"/>
+                                        <connections>
+                                            <segue destination="jmC-Ep-6Aa" kind="show" identifier="homeToPark" id="s4I-YZ-HV0"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -81,11 +86,12 @@
                         <segue destination="Uyw-gb-0VT" kind="show" identifier="homeToGyroData" id="jfa-Dh-gOm"/>
                         <segue destination="6ru-lq-nWl" kind="show" identifier="homeToMagData" id="29E-dh-1wJ"/>
                         <segue destination="7Wy-eM-cRF" kind="show" identifier="hometToProcMot" id="dl4-eI-wE3"/>
+                        <segue destination="jmC-Ep-6Aa" kind="show" identifier="homeToPark" id="5j9-xf-Xoz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NbL-z1-X6H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-308" y="-166"/>
+            <point key="canvasLocation" x="-354" y="-161"/>
         </scene>
         <!--Magnetometer data-->
         <scene sceneID="GVJ-dz-uJy">
@@ -96,26 +102,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QMJ-PV-Knc" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="64" width="375" height="280"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="280"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="Cs7-7J-kZt"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFS-Fm-ZJq" userLabel="LabelX">
-                                <rect key="frame" x="82" y="354" width="11" height="21"/>
+                                <rect key="frame" x="82" y="334" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dhh-xg-LOo" userLabel="LabelY">
-                                <rect key="frame" x="182" y="354" width="11" height="21"/>
+                                <rect key="frame" x="182" y="334" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Z" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAI-aO-ldR" userLabel="LabelZ">
-                                <rect key="frame" x="282" y="354" width="11" height="21"/>
+                                <rect key="frame" x="282" y="334" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -157,26 +163,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQa-pY-GV9" userLabel="LabelY">
-                                <rect key="frame" x="182" y="374" width="11" height="21"/>
+                                <rect key="frame" x="182" y="354" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Z" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhv-hv-jYC" userLabel="LabelZ">
-                                <rect key="frame" x="282" y="374" width="11" height="21"/>
+                                <rect key="frame" x="282" y="354" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGp-hd-VJ4" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="84" width="343" height="280"/>
+                                <rect key="frame" x="16" y="64" width="343" height="280"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="sUM-Vs-Ja0"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FK4-7i-rQK" userLabel="LabelX">
-                                <rect key="frame" x="82" y="374" width="11" height="21"/>
+                                <rect key="frame" x="82" y="354" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -218,26 +224,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3W-0I-zE1" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="84" width="343" height="280"/>
+                                <rect key="frame" x="16" y="64" width="343" height="280"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="EDK-vM-vZl"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GWc-KC-v1x" userLabel="LabelX">
-                                <rect key="frame" x="82" y="374" width="11" height="21"/>
+                                <rect key="frame" x="82" y="354" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQf-VM-9S8" userLabel="LabelY">
-                                <rect key="frame" x="182" y="374" width="11" height="21"/>
+                                <rect key="frame" x="182" y="354" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Z" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5F-cd-ByJ" userLabel="LabelZ">
-                                <rect key="frame" x="282" y="374" width="11" height="21"/>
+                                <rect key="frame" x="282" y="354" width="11" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -278,7 +284,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2A-SP-nMi" customClass="LineChartView" customModule="Charts">
-                                <rect key="frame" x="0.0" y="64" width="375" height="280"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="280"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="drp-0H-jLh"/>
@@ -286,14 +292,14 @@
                                 <viewLayoutGuide key="safeArea" id="pDr-kj-sR8"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQv-XT-w5v">
-                                <rect key="frame" x="60" y="372" width="76" height="30"/>
+                                <rect key="frame" x="60" y="352" width="76" height="30"/>
                                 <state key="normal" title="Save to file"/>
                                 <connections>
                                     <action selector="saveToFile:" destination="7Wy-eM-cRF" eventType="touchUpInside" id="qU9-t2-JwI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhw-W8-PlB">
-                                <rect key="frame" x="244" y="372" width="64" height="30"/>
+                                <rect key="frame" x="244" y="352" width="64" height="30"/>
                                 <state key="normal" title="Reset file"/>
                                 <connections>
                                     <action selector="resetFile:" destination="7Wy-eM-cRF" eventType="touchUpInside" id="n2P-tb-ui4"/>
@@ -322,8 +328,35 @@
             </objects>
             <point key="canvasLocation" x="398" y="545"/>
         </scene>
+        <!--Parking Data View Controller-->
+        <scene sceneID="FuQ-xS-kUR">
+            <objects>
+                <viewController id="jmC-Ep-6Aa" customClass="ParkingDataViewController" customModule="Driver_Detection__test_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="arV-jL-CnI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CV-TJ-U8q">
+                                <rect key="frame" x="129" y="144" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0CV-TJ-U8q" firstAttribute="leading" secondItem="Yzq-z2-55t" secondAttribute="leading" constant="129" id="WtC-yG-QQ1"/>
+                            <constraint firstItem="0CV-TJ-U8q" firstAttribute="top" secondItem="Yzq-z2-55t" secondAttribute="top" constant="100" id="X8P-qH-0jL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yzq-z2-55t"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="q3y-ME-HCX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yE2-gl-nBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="1222"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="s4I-YZ-HV0"/>
         <segue reference="MQx-2X-r27"/>
         <segue reference="B7R-iw-D4r"/>
         <segue reference="l98-CI-6bJ"/>
