@@ -11,8 +11,20 @@ import UIKit
 
 class ParkingDataViewController: UIViewController {
     
+    var parkDataCollector = ParkDataCollector()
+    
     override func viewDidLoad() {
         
+    }
+    
+    @IBAction func onStartPressed(_ sender: Any) {
+
+        parkDataCollector.startCollectingData()
+        
+    }
+    
+    @IBAction func onStopPressed(_ sender: Any) {
+        parkDataCollector.stopCollectingData()
     }
     
 }

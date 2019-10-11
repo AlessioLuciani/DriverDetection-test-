@@ -337,14 +337,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0CV-TJ-U8q">
-                                <rect key="frame" x="129" y="144" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="129" y="144" width="34" height="30"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="onStartPressed:" destination="jmC-Ep-6Aa" eventType="touchUpInside" id="yb5-xp-CWW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5i-XN-NOR">
+                                <rect key="frame" x="129" y="228" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="onStopPressed:" destination="jmC-Ep-6Aa" eventType="touchUpInside" id="vPb-bz-4As"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="0CV-TJ-U8q" firstAttribute="leading" secondItem="Yzq-z2-55t" secondAttribute="leading" constant="129" id="WtC-yG-QQ1"/>
                             <constraint firstItem="0CV-TJ-U8q" firstAttribute="top" secondItem="Yzq-z2-55t" secondAttribute="top" constant="100" id="X8P-qH-0jL"/>
+                            <constraint firstItem="n5i-XN-NOR" firstAttribute="top" secondItem="0CV-TJ-U8q" secondAttribute="bottom" constant="54" id="m2M-B1-8n5"/>
+                            <constraint firstItem="n5i-XN-NOR" firstAttribute="leading" secondItem="0CV-TJ-U8q" secondAttribute="leading" id="osU-LD-2nt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yzq-z2-55t"/>
                     </view>
@@ -352,7 +364,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yE2-gl-nBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="398" y="1222"/>
+            <point key="canvasLocation" x="397.60000000000002" y="1221.1394302848576"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

@@ -61,6 +61,7 @@ class ParkDataCollector {
         collectingData = false
         dataCollectionWork.cancel()
         let json = parkSample.json()
+        // print(json)
         // TODO: Inviare l'upload al server
     }
     
